@@ -6,6 +6,19 @@ import { COLORS } from '../../constants';
 import Icon from '../Icon';
 import VisuallyHidden from '../VisuallyHidden';
 
+const SIZES = {
+  small: {
+    "stroke": 1,
+    "fontSize": 14,
+    "gap": 4,
+  },
+  large: {
+    "stroke": 2,
+    "fontSize": 18,
+    "gap": 8,
+  },
+}
+
 const IconInput = ({
   label,
   icon,
@@ -13,7 +26,43 @@ const IconInput = ({
   size,
   placeholder,
 }) => {
-  return 'TODO';
+  const sizeStyle = SIZES[size] || SIZES.small
+  
+  return <Wrapper style={{ width: `${width}px`, fontSize: `${sizeStyle.fontSize}px`}} stroke={sizeStyle.stroke}>
+    <Icon id={icon} size={sizeStyle.fontSize} strokeWidth={sizeStyle.stroke} />
+    <Input placeholder={placeholder} style={{ marginLeft: `${sizeStyle.gap}px` }}></Input>
+  </Wrapper>;
 };
+
+const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+  border-bottom: ${({ stroke }) => stroke}px solid black;
+  outline-offset: 2px;
+  padding-bottom: 1px;
+
+  border-radius: 2px;
+  &:focus-within {
+    outline: 2px solid ${COLORS.primary}
+  }
+
+  color: ${COLORS.gray700};
+  &:hover {
+    color: black;
+  }
+`
+
+const Input = styled.input`
+  border: none;
+  outline: none;
+  color: inherit;
+  font-size: inherit;
+  font-weight: bold;
+
+  &::placeholder {
+    color: ${COLORS.gray500};
+    font-weight: normal;
+  }
+`
 
 export default IconInput;
