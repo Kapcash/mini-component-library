@@ -28,6 +28,10 @@ const Wrapper = styled.div`
 
   background: ${COLORS.transparentGray15};
   color: ${COLORS.gray500};
+
+  &:focus-within {
+    outline: 2px solid ${COLORS.primary};
+  }
 `
 
 const StyledSelect = styled.select`
