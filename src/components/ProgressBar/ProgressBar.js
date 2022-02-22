@@ -24,18 +24,20 @@ const SIZES = {
 };
 
 const ProgressBackground = styled.div`
-  background: #80808026;
-  box-shadow: inset 0px 2px 4px ${COLORS.transparentGray35};
   padding: var(--padding);
-  border-radius: var(--borderRadius);
   height: var(--height);
+  background: #80808026;
+
+  box-shadow: inset 0px 2px 4px ${COLORS.transparentGray35};
+  border-radius: var(--borderRadius);
 `
 
 const ProgressLineRadius = styled.div`
-  border-radius: 4px;
-  overflow: hidden;
   width: 100%;
   height: 100%;
+  border-radius: 4px;
+
+  overflow: hidden;
 `
 
 const ProgressLine = styled.div`

@@ -38,18 +38,20 @@ const IconInput = ({
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  border-bottom: ${({ stroke }) => stroke}px solid black;
+
   outline-offset: 2px;
   padding-bottom: 1px;
 
   border-radius: 2px;
-  &:focus-within {
-    outline: 2px solid ${COLORS.primary}
-  }
-
+  border-bottom: ${({ stroke }) => stroke}px solid black;
   color: ${COLORS.gray700};
+
   &:hover {
     color: black;
+  }
+
+  &:focus-within {
+    outline: 2px solid ${COLORS.primary}
   }
 `
 
