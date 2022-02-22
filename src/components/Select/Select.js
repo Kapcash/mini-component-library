@@ -11,13 +11,17 @@ const Select = ({ label, value, onChange, children }) => {
   return (
     <Wrapper>
       {displayedValue}
-      <Icon id="chevron-down" size="16" />
+      <MarginIcon id="chevron-down" size="18" />
       <StyledSelect value={value} onChange={onChange}>
         {children}
       </StyledSelect>
     </Wrapper>
   );
 };
+
+const MarginIcon = styled(Icon)`
+  margin-left: 12px;
+`
 
 const Wrapper = styled.div`
   padding: 12px 16px;

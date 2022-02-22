@@ -30,8 +30,8 @@ const IconInput = ({
   
   return <Wrapper style={{ width: `${width}px`, fontSize: `${sizeStyle.fontSize}px`}} stroke={sizeStyle.stroke}>
     <VisuallyHidden>{label}</VisuallyHidden>
-    <Icon id={icon} size={sizeStyle.fontSize} strokeWidth={sizeStyle.stroke} />
-    <Input placeholder={placeholder} style={{ marginLeft: `${sizeStyle.gap}px` }}></Input>
+    <MarginIcon id={icon} gap={sizeStyle.gap} size={sizeStyle.fontSize} strokeWidth={sizeStyle.stroke} />
+    <Input placeholder={placeholder}></Input>
   </Wrapper>;
 };
 
@@ -51,6 +51,10 @@ const Wrapper = styled.div`
   &:hover {
     color: black;
   }
+`
+
+const MarginIcon = styled(Icon)`
+  margin-right: ${({ gap }) => gap}px;
 `
 
 const Input = styled.input`
