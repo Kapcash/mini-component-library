@@ -27,7 +27,11 @@ const Wrapper = styled.div`
   position: relative;
 
   background: ${COLORS.transparentGray15};
-  color: ${COLORS.gray500};
+  color: ${COLORS.gray700};
+
+  &:hover {
+    color: black;
+  }
 
   &:focus-within {
     outline: 2px solid ${COLORS.primary};
