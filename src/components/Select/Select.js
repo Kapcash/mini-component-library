@@ -40,7 +40,7 @@ const StyledSelect = styled.select`
   width: 100%;
   height: 100%;
 
-  visibility: hidden;
+  opacity: 0;
 `
 
 export default Select;
