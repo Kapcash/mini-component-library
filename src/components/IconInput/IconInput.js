@@ -29,6 +29,7 @@ const IconInput = ({
   const sizeStyle = SIZES[size] || SIZES.small
   
   return <Wrapper style={{ width: `${width}px`, fontSize: `${sizeStyle.fontSize}px`}} stroke={sizeStyle.stroke}>
+    <VisuallyHidden>{label}</VisuallyHidden>
     <Icon id={icon} size={sizeStyle.fontSize} strokeWidth={sizeStyle.stroke} />
     <Input placeholder={placeholder} style={{ marginLeft: `${sizeStyle.gap}px` }}></Input>
   </Wrapper>;
